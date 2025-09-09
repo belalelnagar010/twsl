@@ -1,0 +1,520 @@
+  /* ---------- Animations ---------- */
+  @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-100px); }
+      to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(100px); }
+      to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .about , .contact , .blog , .contact {
+    background-image: url('../images/about-hero.png');
+    background-size: cover;
+    height: 30vh;
+}
+
+.navbar
+{
+  background: #D3EEF5;
+  border-radius: 20px;
+
+}
+
+.navbar-nav
+{
+  margin-right: auto;
+  margin-left:0 !important
+}
+
+  /* Hand animations */
+  .hand-human, .hand-robot {
+      opacity: 0;
+  }
+
+  @keyframes slideInFromLeft {
+      from { transform: translateX(-150px) translateY(-50%); opacity: 0; }
+      to   { transform: translateX(calc(50% - var(--meet-gap)/2)) translateY(-50%); opacity: 1; }
+  }
+
+  @keyframes slideInFromRight {
+      from { transform: translateX(150px) translateY(-50%); opacity: 0; }
+      to   { transform: translateX(calc(-50% + var(--meet-gap)/2)) translateY(-50%); opacity: 1; }
+  }
+
+  .animate-hands .hand-human {
+      animation: slideInFromLeft 1.2s ease-out forwards;
+  }
+
+  .animate-hands .hand-robot {
+      animation: slideInFromRight 1.2s ease-out forwards;
+  }
+
+  /* ---------- Theme ---------- */
+  :root {
+      --primary-600: #16256F;
+      --bg-grad-start: #f8fafc;
+      --bg-grad-mid: #e2e8f0;
+      --bg-grad-end: #cbd5e1;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --meet-y: 60%;
+      --meet-gap: -10px; /* Negative gap for overlap/touching */
+  }
+
+  body {
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  header
+  {
+    z-index: 200
+  }
+  /* ---------- Hero Section ---------- */
+  .gradient-bg {
+      background: linear-gradient(135deg, var(--bg-grad-start) 0%, var(--bg-grad-mid) 50%, var(--bg-grad-end) 100%);
+  }
+
+  #home.homepage {
+      position: relative;
+      min-height: clamp(540px, 88vh, 980px);
+      overflow: hidden;
+      padding-top: 20%;
+  }
+
+  .hero-inner {
+      width: min(1100px, 92%);
+      margin-inline: auto;
+      position: relative;
+      z-index: 3;
+      text-align: center;
+  }
+
+  .hero-title {
+      font-weight: 800;
+      line-height: 1.1;
+      font-size: clamp(28px, 4.2vw, 56px);
+      margin: 0 0 18px;
+      animation: fadeInUp 1.2s ease-out both;
+  }
+
+  .hero-title .accent {
+      background: linear-gradient(90deg, #1d4ed8, #0b3aa6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+  }
+
+  .cta-btn {
+      background: var(--primary-600);
+      color: #fff;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 80px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 12px 30px rgba(19, 35, 107, .25);
+      transition: transform .2s, box-shadow .2s, opacity .2s;
+      animation: fadeInUp 1.2s ease-out .2s both;
+      font-size: 16px;
+  }
+
+  .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(19, 35, 107, .35);
+      opacity: .95;
+  }
+
+  /* ---------- Hands Positioning ---------- */
+  .hands-wrap {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+  }
+
+  .hands-layer {
+      position: absolute;
+      inset: 0;
+  }
+
+  .hand-img {
+      position: absolute;
+      height: clamp(280px, 45vw, 720px);
+      width: auto;
+  }
+
+  /* Human hand (left side) - positioned to touch from right edge */
+  .hand-human {
+      right: 60%;
+      top: var(--meet-y);
+      transform-origin: 90% 55%; /* Adjust based on fingertip position in image */
+      transform: translateX(calc(50% - var(--meet-gap)/2)) translateY(-50%);
+  }
+
+  /* Robot hand (right side) - positioned to touch from left edge */
+  .hand-robot {
+      left: 60%;
+      top: var(--meet-y);
+      transform-origin: 10% 58%; /* Adjust based on fingertip position in image */
+      transform: translateX(calc(-50% + var(--meet-gap)/2)) translateY(-50%);
+  }
+
+  /* ---------- Responsive Adjustments ---------- */
+  @media (max-width: 992px) {
+      :root {
+          --meet-y: 58%;
+          --meet-gap: -8px;
+      }
+      .hand-img {
+          height: clamp(240px, 50vw, 600px);
+      }
+  }
+
+  @media (max-width: 768px) {
+      :root {
+          --meet-y: 56%;
+          --meet-gap: -5px;
+      }
+      .hand-img {
+          height: clamp(200px, 55vw, 480px);
+      }
+
+    #home.homepage {
+      padding-top: clamp(10rem, 10vh, 7rem);
+      min-height: 500px;
+      height: 500px;
+    }
+
+      .navbar-collapse
+    {
+      padding:20px;
+    }
+    .navbar-collapse a {
+      color:#000
+    }
+    
+  }
+
+  @media (max-width: 480px) {
+      :root {
+          --meet-y: 54%;
+          --meet-gap: -3px;
+      }
+      .hand-img {
+          height: clamp(180px, 60vw, 400px);
+      }
+  }
+/* شاشات أصغر: نعدّل نقطة الالتقاء قليلًا ونقلل الفجوة */
+@media (max-width: 992px){
+  :root{ --meet-y: 60%; --meet-gap: 8px; }
+}
+@media (max-width: 768px){
+  :root{ --meet-y: 62%; --meet-gap: 6px; }
+  .hand-img{ height: clamp(220px, 58vw, 560px); }
+}
+/* particles (optional) */
+.particle{ position:absolute; width:8px; height:8px; border-radius:999px; background:#60a5fa; opacity:.9; }
+/* Our Story styles */
+.rounded-xxl { border-radius: 24px; }
+.obj-cover { object-fit: cover; }
+
+.story-accent { color: #6EE1FF; }          /* نفس السماوي في التصميم */
+.story-btn {
+  padding:10px 30px !important;
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+  box-shadow: 0 8px 24px rgba(22, 37, 111, .25);
+}
+.story-btn:hover {
+  filter: brightness(.95);
+  transform: translateY(-1px);
+}
+.story-image img { display: block; }
+
+/* تحسين صغير للمسافات في الشاشات الصغيرة */
+@media (max-width: 575.98px) {
+  #about .display-6 { font-size: 1.8rem; }
+}
+
+/* ===== Mission / Vision / Value ===== */
+.mv-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+/* القمة نصف الدائرية */
+.mv-hero{
+  position:relative;
+  height:220px;
+  border-top-left-radius:999px;
+  border-top-right-radius:999px;
+  background-size:cover;
+  background-position:center;
+}
+/* خلفيات القمم */
+.mv-hero--mission{ background-image:url("../images/mision.png"); }
+.mv-hero--vision { background-image:url("../images/vision.png"); }
+.mv-hero--value  { background-image:url("../images/value.png"); }
+
+/* عنوان أبيض فوق القمة */
+.mv-title{
+  font-weight:600;
+  text-shadow:0 2px 10px rgba(0,0,0,.35);
+}
+
+/* الهِكْس والأيقونة المتداخلة */
+.mv-icon{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  top:180px;                /* فوق بداية النص شوية */
+  z-index:2;
+  display:grid;
+  place-items:center;
+  width:76px; height:76px;
+  z-index: 3;
+}
+
+
+/* Mission Hex */
+.hex--cyan {
+  background: url('../images/star1.png') no-repeat center center;
+  background-size: cover;
+}
+
+/* Vision Hex */
+.hex--purple {
+  background: url('../images/start2.png') no-repeat center center;
+  background-size: cover;
+}
+
+/* Value Hex */
+.hex--sky {
+  background: url('../images/start3.png') no-repeat center center;
+  background-size: cover;
+}
+
+/* تحسين النص أسفل الأيقونة */
+.mv-card .p-4{ position:relative; }
+
+/* Responsiveness */
+@media (max-width: 575.98px){
+  .mv-hero{ height:200px; }
+  .mv-icon{ top:165px; width:70px; height:70px; }
+}
+
+/* ===== Our Product (Always side-by-side) ===== */
+/* ===== Our Product (Circular, no page overflow) ===== */
+#products .product-stage{
+  --card-w: clamp(240px, 28vw, 320px);
+  --card-h: clamp(380px, 42vw, 500px);
+  --offset: min(38vw, 260px);     /* المسافة يمين/شمال من المركز */
+  --tilt: 6deg;
+  position: relative;
+  min-height: max(var(--card-h), 420px);
+  overflow: hidden;               /* يمنع أي سكرول */
+}
+
+#products .product-card{
+  position: absolute;
+  left: 50%; top: 50%;
+  width: var(--card-w);
+  height: var(--card-h);
+  border-radius: 28px;
+  background: #fff;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  transition: transform .45s ease, box-shadow .45s ease, z-index .45s ease, opacity .45s ease;
+  will-change: transform;
+}
+
+/* الجسم الداخلي */
+#products .product-body{
+  width:100%; height:100%;
+  padding:18% 10% 10%;
+  display:flex; align-items:center; justify-content:center;
+}
+
+/* الخلفيات */
+#products .product-card--current{
+  background: linear-gradient(180deg,#d25bff 0%, #6a2bd2 100%);
+  color:#fff;
+  box-shadow: 0 18px 46px rgba(0,0,0,.18);
+}
+#products .product-card--future{
+  background: linear-gradient(180deg,#e6f4ff 0%, #1e90ff 100%);
+}
+#products .product-card--future::before{
+  content:""; position:absolute; inset:0 0 auto 0; height:40px; background:#3b82f6;
+  z-index:1; opacity:.85;
+}
+#products .product-card--current::before{
+  content:""; position:absolute; inset:0 0 auto 0; height:40px; background:#b900ff;
+  z-index:1; opacity:.9;
+}
+
+/* الشارات */
+#products .product-badge{
+  position:absolute; top:12px; left:50%; transform:translateX(-50%);
+  font-weight:600; font-size:.95rem; z-index:2; color:#fff;
+}
+#products .product-card .badge-current{ display:none; }
+#products .product-card .badge-future{ display:block; }
+#products .is-center .badge-current{ display:block; }
+#products .is-center .badge-future{ display:none; }
+
+/* اللوجوهات */
+#products .product-logo{ width:46%; max-width:160px; }
+#products .product-logo-lg{ width:38%; max-width:180px; }
+
+/* تموضع الدوار */
+#products .is-center{
+  z-index:3;
+  transform: translate(-50%, -50%) scale(1);
+}
+#products .is-left{
+  z-index:2;
+  transform: translate(calc(-50% - var(--offset)), calc(-50% + 18px)) rotate(calc(var(--tilt) * -1)) scale(.92);
+  box-shadow:0 10px 28px rgba(0,0,0,.12);
+}
+#products .is-right{
+  z-index:2;
+  transform: translate(calc(-50% + var(--offset)), calc(-50% + 18px)) rotate(var(--tilt)) scale(.92);
+  box-shadow:0 10px 28px rgba(0,0,0,.12);
+}
+
+/* الأزرار */
+#products .product-controls .btn{
+  width:42px; height:42px; border-radius:999px; display:flex; align-items:center; justify-content:center;
+}
+#products .product-controls .btn-light-subtle{ background:#eef2f7; border-color:transparent; }
+
+/* Responsive */
+@media (max-width: 991.98px){
+  #products .product-stage{
+    --card-w: clamp(220px, 60vw, 300px);
+    --card-h: clamp(360px, 68vw, 480px);
+    --offset: min(44vw, 220px);
+  }
+  #products .product-logo-lg{ width:44%; }
+}
+
+@media (max-width: 575.98px){
+  #products .product-stage{
+    --card-w: clamp(240px, 86vw, 320px);
+    --card-h: min(70vh, 460px);
+    --offset: 70vw; /* تبعدهم كويس يمين/شمال مع الحفاظ على عدم خروجهم */
+  }
+  /* قلل الميل علشان موبايل صغير */
+  #products .product-stage{ --tilt: 4deg; }
+}
+
+/* احتياط عام */
+#products .product-card img{ max-width:100%; height:auto; }
+
+/********************************** BLOGS AREA ******************/
+/* Blog shells (الإطار السماوي الخارجي) */
+.blog-shell{
+  background:#d9f2f9;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06) inset, 0 12px 28px rgba(0,0,0,.05);
+}
+
+/* عناصر القائمة على اليمين */
+.blog-item{ text-decoration:none; color:inherit; background:#fff; }
+.blog-item.active{ outline:3px solid #b9e7f4; }
+.blog-item:hover{ transform: translateY(-2px); transition: .2s; }
+
+/* قص سطرين للنص الصغير */
+.line-clamp-2{
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
+
+/* تحسين الصورة الرئيسية */
+#blogs .blog-main img{ object-fit:cover; }
+
+/* responsive tweaks */
+@media (max-width: 991.98px){
+  #blogs .blog-shell{ padding: 1rem !important; }
+}
+
+/* Contact icons (left) */
+/**************** contact **************/
+
+.contact-badge{
+  width:44px; height:44px;
+  border-radius:50%;
+  display:grid; place-items:center;
+  background:#e7f6fd;            /* سماوي فاتح */
+  box-shadow: inset 0 0 0 2px #d6eef8;
+}
+
+/* Gradient card on the right */
+.contact-card{
+  background: radial-gradient(120% 120% at 70% 0%, #c6ecf6 0%, #89c7da 45%, #5aa8c3 70%, #376e9a 100%);
+  color:#0b2a3d;
+  border: none;
+}
+.contact-card .form-label{ color:#0b2a3d; opacity:.9; }
+
+/* Inputs look */
+.contact-input{
+  border-radius:12px;
+  text-align: right;
+  border:1px solid rgba(255,255,255,.6);
+  background: rgba(255,255,255,.9);
+  box-shadow: 0 2px 0 rgba(0,0,0,.02);
+}
+.contact-input:focus{
+  border-color:#bfe9f7;
+  box-shadow: 0 0 0 .25rem rgba(30,123,216,.15);
+}
+
+/* Button */
+.contact-btn{
+  background:#16256F; border-color:#16256F;
+  padding:10px 150px !important;
+  box-shadow: 0 10px 24px rgba(22,37,111,.25);
+}
+.contact-btn:hover{ filter:brightness(.95); }
+
+/* rounded look like the mock */
+.contact-card.rounded-4{ border-radius:28px !important; }
+
+/**************** Footer ***********/
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Social icons */
+.social-icon {
+  width: 32px; height: 32px;
+  display: flex;
+  align-items: center; justify-content: center;
+  border-radius: 50%;
+  background-color: #16256F;
+  color: #fff;
+  font-size: 1rem;
+}
+.social-icon i {
+  color:#fff
+}
+.social-icon:hover {
+  filter: brightness(0.9);
+}
+
+
+.btn-primary {
+  background-color: #16256F;
+}
