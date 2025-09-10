@@ -137,8 +137,9 @@
 }
 
 .navbar-nav .active {
-  color: #16256f;
+  color: #16256f !important;
   font-weight: 700;
+  
 }
 .text h2 {
   font-family: "Lemon", serif;
@@ -154,7 +155,6 @@
   padding: 14px 90px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 12px 30px rgba(19, 35, 107, 0.25);
   transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
   animation: fadeInUp 1.2s ease-out 0.2s both;
   font-size: 16px;
@@ -1417,28 +1417,28 @@ header {
 /* start large screen */
 
 
-@media screen and (min-width: 776px) and (max-width: 850px) {
+@media screen and (min-width: 776px) and (max-width: 880px) {
  .text h2
  {
     
     font-size: 30px !important;
 }
-       .hand-human {
-    width: 65vw;
-    position: absolute;
- left: -67px !important;
-        top: 43% !important;
-    transform: translate(0%, -50%);
-  }
-  .hand-robot {
-    position: absolute;
-             right: -111px !important;
-        top: 80% !important;
-    transform: translate(0%, -50%);
-  }
+    .hand-human {
+     width: 65vw;
+        left: -86px !important;
+        top: 53% !important;
+        transform: translate(0%, -50%) !important;
+    
+    }
+.hand-robot
+ {
+        right: -89px !important;
+        top: 72% !important;
+        transform: translate(0%, -50%) !important;
+    }
 }
 
-@media screen and (min-width: 769px) and (max-width: 992px) {
+@media screen and (min-width: 880px) and (max-width: 992px) {
   
 .text h2
  {
@@ -1448,16 +1448,14 @@ header {
 .hero-inner {
     padding-top: 150px;
 }
-    .hand-human
- {
-               left: -72px !important;
-        top: 43% !important;
+.hand-human {
+        left: -142px !important;
+        top: 53% !important;
         transform: translate(0%, -50%) !important;
     }
-    .hand-robot
- {
-        right: -130px !important;
-        top: 65% !important;
+     .hand-robot {
+        right: -97px !important;
+        top: 72% !important;
         transform: translate(0%, -50%) !important;
     }
 
@@ -1473,19 +1471,20 @@ header {
     background-color: red !important;
   } */
 
-      .hand-human {
-    width: 65vw;
-    position: absolute;
- left: -87px;
-        top: 51%;
-    transform: translate(0%, -50%);
-  }
-  .hand-robot {
-    position: absolute;
-             right: -90px;
-        top: 71%;
-    transform: translate(0%, -50%);
-  }
+ .hand-human {
+        width: 65vw;
+        position: absolute;
+        left: -96px;
+        top: 58%;
+        transform: translate(0%, -50%);
+    }
+      .hand-robot
+ {
+        position: absolute;
+        right: -90px;
+        top: 78%;
+        transform: translate(0%, -50%);
+    }
 }
 @media screen and (min-width: 1100px) and (max-width: 1200px) {
 
@@ -1497,16 +1496,16 @@ header {
     .hand-human {
     width: 65vw;
     position: absolute;
-            left: -94px;
-    top: 50%;
+   left: -104px;
+        top: 56%;
     transform: translate(0%, -50%);
   }
-  .hand-robot {
-    position: absolute;
+ .hand-robot {
+        position: absolute;
         right: -100px;
-    top: 72%;
-    transform: translate(0%, -50%);
-  }
+        top: 79%;
+        transform: translate(0%, -50%);
+    }
 }
 /* end axtra large screen */
 /* start extra extra large screen */
@@ -1518,7 +1517,7 @@ header {
     .hand-human {
         width: 62vw;
         position: absolute;
-        left: -55px;
+        left: -70px;
         top: 58%;
         transform: translate(0%, -50%);
     }
@@ -1537,7 +1536,7 @@ header {
  .hand-human {
         width: 60vw;
         position: absolute;
-        left: -58px;
+        left: -68px;
         top: 56%;
         transform: translate(0%, -50%);
     }
@@ -1549,6 +1548,46 @@ header {
         transform: translate(0%, -50%);
     }
 }
+@media screen and (min-width: 1500px) and (max-width: 1600px) {
+   /* .animate-hands {
+    background-color: red !important;
+  } */
+     .hand-human
+ {
+        width: 60vw;
+        position: absolute;
+        left: -85px;
+        top: 54%;
+        transform: translate(0%, -50%);
+    }
+     .hand-robot {
+        position: absolute;
+        right: -108px;
+        top: 81%;
+        transform: translate(0%, -50%);
+    }
+}
+@media screen and (min-width: 1600px) and (max-width: 1700px) {
+   /* .animate-hands {
+    background-color: red !important;
+  } */
+     .hand-human
+ {
+        width: 60vw;
+        position: absolute;
+        left: -85px;
+        top: 54%;
+        transform: translate(0%, -50%);
+    }
+     .hand-robot {
+        position: absolute;
+        right: -108px;
+        top: 86%;
+        transform: translate(0%, -50%);
+    }
+}
+
+
 /* end extra extra large screen */
 
 /* end media queres*/
