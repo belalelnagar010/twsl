@@ -355,6 +355,7 @@ header {
 .h2-story {
   font-size: 35px;
   font-family: "Poppins", sans-serif;
+  line-height: 55px;
 }
 .p-story {
   font-size: 19px;
@@ -363,6 +364,7 @@ header {
   font-weight: 400;
   margin-top: 32px;
   margin-bottom: 56px;
+  line-height: 32px
 }
 
 .story-accent {
@@ -371,7 +373,7 @@ header {
 .story-btn {
   width: 100%;
   max-width: 352px;
-  height: 56px;
+  height: 56px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -379,17 +381,17 @@ header {
   font-size: 24px;
   font-weight: 500;
   padding: 0 30px;
-  border-radius: 999px;
-  background: var(--primary-600);
+  background: radial-gradient(circle, #1d2c7a 0%, #16256f 100%) !important;
   border: none;
   color: #fff;
-  box-shadow: 0 8px 24px rgba(22, 37, 111, 0.25);
-  transition: all 0.3s ease;
+  border-radius: 40px;
+  transition: all 1s ease-in-out !important;
 }
 
 .story-btn:hover {
-  filter: brightness(0.95);
-  transform: translateY(-2px);
+  background: radial-gradient( #39478B 0%, #0E194C 100%);
+
+
 }
 
 .story-image img {
@@ -455,6 +457,8 @@ header {
 .mv-card {
   width: 344px;
   height: 253px;
+  
+
 }
 
 /* عشان نعمل مسافة 40px بين الكروت */
@@ -507,11 +511,15 @@ header {
 
 .prag {
   padding: 0 32px;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 50px;
   font-size: 16px;
   color: #505050;
   font-weight: 400;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 0px 0px 16px 16px;
+
+
 }
 /* تحسين النص أسفل الأيقونة */
 .mv-card .p-4 {
@@ -641,19 +649,20 @@ header {
 #products .is-center {
   z-index: 3;
   transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 #products .is-left {
   z-index: 2;
   transform: translate(calc(-50% - 350px), calc(-50% + 18px))
-    rotate(calc(var(--tilt) * -1)) scale(0.92);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    rotate(calc(var(--tilt) * -1)) scale(.80);
   margin-right: 140px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
 }
 #products .is-right {
   z-index: 2;
-  transform: translate(calc(-50% + 350px), calc(-50% + 18px))
-    rotate(var(--tilt)) scale(0.92);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+     transform: translate(calc(-50% + 350px), calc(-50% + 18px)) rotate(var(--tilt)) scale(.80);
+     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* الأزرار */
@@ -763,6 +772,7 @@ header {
   max-width: 558px;
   max-height: 674px;
   padding: 15px;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .blog-shell-right {
   background: linear-gradient(
@@ -815,6 +825,7 @@ header {
   border: none;
   border-radius: 30px;
   padding: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .Education {
   margin-top: 30px;
@@ -873,7 +884,7 @@ header {
     align-items: flex-start;
     width: 100%;
   }
-
+  
   .blog-right-image {
     width: 100%;
     max-width: 100%;
@@ -1109,7 +1120,13 @@ header {
   background-color: #16256f;
   height: 50px;
   margin-top: 20px;
+  transition: all 1s ease-in-out !important;
 }
+
+.btn-primary:hover {
+  background: radial-gradient( #39478B 0%, #0E194C 100%) !important;
+}
+
 /* Responsive footer */
 
 /* الموبايل */
