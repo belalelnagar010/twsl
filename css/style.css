@@ -737,7 +737,7 @@ header {
 /* Blog shells (الإطار السماوي الخارجي) */
 
 .Bolg-title {
-  margin-bottom: 56px;
+ margin-bottom: 29px;
   color: #191919;
   font-size: 32px;
 }
@@ -763,8 +763,7 @@ header {
     rgba(210, 239, 246, 0.92) 0%,
     rgba(158, 216, 229, 0.92) 100%
   );
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) inset,
-    0 12px 28px rgba(0, 0, 0, 0.05);
+  margin: 0 auto 0px;
   border-radius: 40px;
   margin-bottom: 140px;
   width: 100%;
@@ -871,25 +870,7 @@ header {
     margin: 0; /* يشيل المارجن من الرو */
   }
 
-  #blogs .col-12 {
-    padding: 0 !important; /* يشيل البادينج من الأعمدة */
-  }
-
-  .blog-item {
-    width: 100%; /* ياخد العرض كله */
-  }
-
-  .blog-item .content {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-  }
-  
-  .blog-right-image {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
+ 
 }
 
 /* قص سطرين للنص الصغير */
@@ -1219,6 +1200,14 @@ header {
   .p-story {
     font-size: 18px;
   }
+  .all-blog{
+    justify-content: center !important;
+    display: block !important;
+  }
+  .blog-shell-left
+ {
+    margin-bottom: 49px;
+}
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
@@ -1235,6 +1224,18 @@ header {
   .p-story {
     font-size: 18px;
   }
+    .all-blog{
+    justify-content: center !important;
+    display: block !important;
+  }
+  .blog-shell-left
+ {
+    margin-bottom: 49px;
+}
+.Education {
+    margin-top: 7px;
+    margin-bottom: 8px;
+}
 }
 
 @media screen and (min-width: 350px) and (max-width: 576px) {
@@ -1245,6 +1246,31 @@ header {
   #blogs {
  
   padding-inline: 20px;
+}
+
+.blog-right-image {
+    max-width: 100%;
+}
+
+.blog-item .content {
+    flex-direction: column;
+}
+.blog-item-p {
+    font-size: 12px;
+}
+
+   .all-blog{
+    justify-content: center !important;
+    display: block !important;
+  }
+  .blog-shell-left
+ {
+    margin-bottom: 49px;
+}
+.Education {
+    margin-top: 7px;
+    margin-bottom: 8px;
+    font-size: 14px;
 }
 .title-Our-Product {
   
@@ -1282,14 +1308,17 @@ header {
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 0px) and (max-width: 350px) {
+  .hand-img {
+    width: 100% !important;
+  }
 }
 
 #about {
   position: relative;
   z-index: 5;
 }
-
+ 
 /* start media queres  */
 @media screen and (min-width: 300px) and (max-width: 350px){
    
@@ -1339,7 +1368,8 @@ header {
 }
 /* start small screen */
 
-@media screen and (min-width: 350px) and (max-width: 375px){
+@media screen and (min-width: 350px) and (max-width: 395px){
+ 
   
   .text h2
  {
@@ -1363,6 +1393,35 @@ header {
 
 }
 @media screen and (min-width: 450px) and (max-width: 511px){
+  .home{
+    min-height: 100vh !important;
+  }
+  
+  .text h2
+ {
+    
+    font-size: 30px !important;
+}
+ 
+ 
+    .hand-human {
+        width: 65vw;
+        position: absolute;
+        left: -43px !important;
+        top: 70% !important;
+        transform: translate(0%, -50%);
+    }
+ .hand-robot {
+        position: absolute;
+        left: 223px !important;
+        top: 82% !important;
+        transform: translate(0%, -50%);
+    }
+}
+@media screen and (min-width: 511px) and (max-width: 576px) {
+  .home{
+    min-height: 100vh !important;
+  }
   
   .text h2
  {
@@ -1370,45 +1429,30 @@ header {
     font-size: 30px !important;
 }
 
-         .hand-human {
-    width: 65vw;
-    position: absolute;
- left: -43px !important;
-        top: 52% !important;
-    transform: translate(0%, -50%);
-  }
-  .hand-robot {
-    position: absolute;
-             left: 223px !important;
-        top: 61% !important;
-    transform: translate(0%, -50%);
-  }
-}
-@media screen and (min-width: 511px) and (max-width: 576px) {
-
-  .text h2
+    .hand-human {
+        width: 65vw;
+        position: absolute;
+        left: -53px !important;
+        top: 72% !important;
+        transform: translate(0%, -50%);
+    }
+     .hand-robot
  {
-    
-    font-size: 30px !important;
-}
-
-         .hand-human {
-    width: 65vw;
-    position: absolute;
- left: -72px !important;
-        top: 49% !important;
-    transform: translate(0%, -50%);
-  }
-  .hand-robot {
-    position: absolute;
-             left: 253px !important;
-        top: 60% !important;
-    transform: translate(0%, -50%);
-  }
+        position: absolute;
+                left: 256px !important;
+        top: 87% !important;
+        transform: translate(0%, -50%);
+    }
 }
 /* end small screen */
 /* start medium screen */
-@media screen and (min-width: 577px) and (max-width: 768px) {
+@media screen and (min-width: 577px) and (max-width: 776px) {
+     /* .animate-hands {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  } */
+  .home{
+    min-height: 100vh !important;
+  }
   
 .text h2
  {
@@ -1416,19 +1460,20 @@ header {
     font-size: 30px !important;
 }
 
-         .hand-human {
-    width: 65vw;
-    position: absolute;
- left: -84px !important;
-        top: 46% !important;
-    transform: translate(0%, -50%);
-  }
-  .hand-robot {
-    position: absolute;
-             right: -111px !important;
-        top: 60% !important;
-    transform: translate(0%, -50%);
-  }
+   .hand-human {
+        width: 65vw;
+        position: absolute;
+        left: -37px !important;
+        top: 62% !important;
+        transform: translate(0%, -50%);
+    }
+      .hand-robot {
+        position: absolute;
+        right: -81px !important;
+        top: 78% !important;
+        transform: translate(0%, -50%);
+    }
+
 }
 /* end medium screen */
 /* start large screen */
@@ -1440,17 +1485,15 @@ header {
     
     font-size: 30px !important;
 }
-    .hand-human {
-     width: 65vw;
-        left: -86px !important;
-        top: 53% !important;
+       .hand-human {
+        width: 65vw;
+        left: -79px !important;
+        top: 55% !important;
         transform: translate(0%, -50%) !important;
-    
     }
-.hand-robot
- {
-        right: -89px !important;
-        top: 72% !important;
+.hand-robot {
+        right: -69px !important;
+        top: 70% !important;
         transform: translate(0%, -50%) !important;
     }
 }
@@ -1487,6 +1530,10 @@ header {
      /* .animate-hands {
     background-color: red !important;
   } */
+  .blog-main {
+    max-width: 349px !important;
+    
+}
 
  .hand-human {
         width: 65vw;
@@ -1508,6 +1555,11 @@ header {
    /* .animate-hands {
     background-color: red !important;
   } */
+
+  .blog-main {
+    max-width: 349px !important;
+    
+}
 
 
     .hand-human {
