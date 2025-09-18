@@ -474,8 +474,7 @@ body {
   display: block;
 }
 
-.is-center img {
-}
+
 #preview .preview-controls .btn {
   width: 42px;
   height: 42px;
@@ -637,36 +636,24 @@ body {
   perspective: 1600px; /* مهم لانيميشن 3D */
 }
 
+.book-stage img{
+  width:600px !important;
+}
 /* الصفحات الثابتة */
-.page {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  max-width: 600px;
-  height: 100%;
-  background-size: 100% 100%;
-  backface-visibility: hidden;
-}
 
-.page-left {
-  left: 0;
-  right: auto;
-}
-.page-right {
-  right: 0;
-  left: auto;
-}
 
 /* ورقة القلب */
 .leaf {
   position: absolute;
-  inset: 0;
-  width: 50%;
+  top: 0;
+  bottom: 0;
+  width: 50%;     /* نص العرض */
   height: 100%;
   transform-style: preserve-3d;
   will-change: transform;
+  z-index: 5;     /* فوق الصفحات الثابتة */
 }
+
 
 /* الوجه الأمامي والخلفي للورقة */
 .leaf .side {
@@ -682,50 +669,40 @@ body {
 
 /* انيميشن القلب يمين←يسار (Next) */
 .turn-from-right {
-  right: 0;
-  transform-origin: left center;
-  animation: flipRight 800ms ease both;
+  right: 0; /* تبدأ من النص اليمين */
+  transform-origin: left center; /* النقطة اللي بتدور حواليها */
+  animation: flipRight 1s ease both;
 }
 
 /* انيميشن القلب يسار→يمين (Prev) */
 .turn-from-left {
-  left: 0;
+  left: 0; /* تبدأ من النص الشمال */
   transform-origin: right center;
-  animation: flipLeft 800ms ease both;
+  animation: flipLeft 1s ease both;
 }
 
+
 @keyframes flipRight {
-  0% {
-    transform: rotateY(0deg);
-  }
-  45% {
-    transform: rotateY(-90deg);
-  }
-  100% {
-    transform: rotateY(-180deg);
-  }
+  0%   { transform: rotateY(0deg); }
+  50%  { transform: rotateY(-90deg); z-index: 6; } /* نص اللفة */
+  100% { transform: rotateY(-180deg); }
 }
 
 @keyframes flipLeft {
-  0% {
-    transform: rotateY(0deg);
-  }
-  45% {
-    transform: rotateY(90deg);
-  }
-  100% {
-    transform: rotateY(180deg);
-  }
+  0%   { transform: rotateY(0deg); }
+  50%  { transform: rotateY(90deg); z-index: 6; }
+  100% { transform: rotateY(180deg); }
 }
+
 
 .book-prev {
   position: absolute;
-  top: 50%;
+  top: 62%;
   left: 23px;
 }
 .book-next {
   position: absolute;
-  top: 50%;
+  top: 62%;
   right: 23px;
 }
 .btn-icon {
@@ -1045,18 +1022,46 @@ body {
     height: 100vh;
   }
 
-  .Unique-title {
+ .Unique-title {
+        color: #191919;
+        font-weight: 600;
+        font-size: 23px;
+    }
+      .Unique-p
+ {
+        color: #191919;
+        font-weight: 400;
+        font-size: 13px;
+        margin-bottom: 51px !important;
+    }
+    .Sawti-Story-p {
+    color: #191919;
+    font-size: 15px;
+    margin-bottom: 46px;
+    padding-left: 41px;
+}
+.Sawti-preview-p {
+    color: #191919;
+    font-size: 13px;
+    margin-bottom: 41px;
+    padding-left: 40px;
+}
+.Sawti-Story-title {
     color: #191919;
     font-weight: 600;
-    font-size: 24px;
-  }
-  .Unique-p {
+    font-size: 23px;
+    margin-bottom: 16px;
+    padding-left: 41px;
+}
+.Sawti-preview-title
+
+ {
     color: #191919;
-    font-weight: 400;
-
-    font-size: 17px;
-  }
-
+    font-weight: 600;
+    font-size: 23px;
+    margin-bottom: 16px;
+    padding-left: 41px;
+}
   .box {
     gap: 40px;
     padding: 0;

@@ -67,10 +67,10 @@ form img{
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) inset, 0 12px 28px rgba(0, 0, 0, 0.05);
 
     border-radius: 40px;
-    
     margin-block: 40px;
     max-width: 397px;
     padding: 14px 15px;
+    cursor: pointer;
 }
 
 .blog-right-image{

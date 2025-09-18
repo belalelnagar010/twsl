@@ -41,7 +41,7 @@
    <div class="collapse navbar-collapse" id="mainNav">
      <ul class="navbar-nav ms-auto gap-lg-4 fw-semibold">
        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-       <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
+       <li class="nav-item"><a class="nav-link active" href="product.html">Product</a></li>
        <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
        <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
        <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
@@ -146,7 +146,6 @@
         <div class="chip chip--purple">Cultural customization</div>
       </div>
     </div>
-    </div>
   </section>
   <!-- ===== Feature Card: Built with Care ===== -->
 <!-- ===== Feature Card: Built with Care ===== -->
@@ -202,37 +201,31 @@
 
 
 <section id="sawti-story" class="py-5 position-relative">
-  <div class="container-fluid">
-    <h3 class="Sawti-Story-title">Sawti Story</h3>
-    <p class="Sawti-Story-p">
-Dive in our journey and discover how Sawti came to life. This book takes you behind the scenes—how the idea started, what inspired us, and why design played such a big role. This isn’t just the story of an app. It’s the story of hope, resilience, and people finally finding their voice.    </p>
+    <div class="container-fluid">
+      <h3 class="Sawti-Story-title">Sawti Story</h3>
+      <p class="Sawti-Story-p">
+        Dive in our journey and discover how Sawti came to life. This book takes you behind the scenes—how the idea started, what inspired us, and why design played such a big role. This isn’t just the story of an app. It’s the story of hope, resilience, and people finally finding their voice.
+      </p>
 
-    <div class="story-book">
-      <div class="book-stage">
-        <!-- الصفحتين الثابتين -->
-        <img  class="page page-left"  alt="Left page">
-        <img class="page page-right" alt="Right page">
-        <!-- ورقة القلب المتحركة تُضاف ديناميكياً -->
-      </div>
+      <div class="story-book">
+        <div class="book-stage d-flex justify-content-center" aria-live="polite">
+          <!-- الصفحتين الثابتين -->
+          <img class="page page-left"  alt="Left page">
+          <img class="page page-right" alt="Right page">
+          <!-- ورقة القلب المتحركة تُضاف ديناميكياً -->
+        </div>
 
         <div class="book-controls">
-    <button class="btn-icon book-prev" type="button" aria-label="Previous">
-      <img src="images/book-l.png" alt="Previous">
-    </button>
-    <button class="btn-icon book-next" type="button" aria-label="Next">
-      <img src="images/book-r.png" alt="Next">
-    </button>
-  </div>
-    
-
-
-
-
+          <button class="btn-icon book-prev" type="button" aria-label="Previous">
+            <img src="images/book-l.png" alt="Previous">
+          </button>
+          <button class="btn-icon book-next" type="button" aria-label="Next">
+            <img src="images/book-r.png" alt="Next">
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-
+  </section>
 
 
 <!-- Footer -->
@@ -323,7 +316,7 @@ Dive in our journey and discover how Sawti came to life. This book takes you beh
       </div>
     </div>
   </div>
-</footer>>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
@@ -416,121 +409,186 @@ Dive in our journey and discover how Sawti came to life. This book takes you beh
 
 </script>
 <script>
-(function(){
-  // 1) عدّل المسارات حسب صورك (تقدر تحط أسماء الصور اللي أرسلتها)
-  // مثال لو عندك ملفات مختلفة الأسماء:
+document.addEventListener('DOMContentLoaded', () => {
+  const image1 = "images/story/page-1-1.png";
+  const image2 = "images/story/page-1-2.png";
+  const image3 = "images/story/page-2-number.png";
+  const image4 = "images/story/page-2.png";
+  const image5 = "images/story/page-3-number.png";
+  const image6 = "images/story/page-3.png";
+  const image7 = "images/story/page-4-number.png";
+  const image8 = "images/story/page-4.png";
+  const image9  = "images/story/page-5-number.png";
+  const image10 = "images/story/page-5.png";
+  const image11 = "images/story/page-6-number.png";
+  const image12 = "images/story/page-6.png";
+  const image13 = "images/story/page-7-number.png";
+  const image14 = "images/story/page-7.png";
+  const image15 = "images/story/page-8-number.png";
+  const image16 = "images/story/page-8.png";
+
   const pages = [
-    'images/story/page-1-1.png',
-    'images/story/page-1-2.png',
-    'images/story/page-1-number.png',
-    'images/story/page-1.png',
-    'images/story/page-2-number.png',
-    'images/story/page-2.png',
-    'images/story/page-3-number.png',
-    'images/story/page-3.png',
-    'images/story/page-4-number.png',
-    'images/story/page-4.png',
-    'images/story/page-5-number.png',
-    'images/story/page-5.png',
-    'images/story/page-6-number.png',
-    'images/story/page-6.png',
-    'images/story/page-7-number.png',
-    'images/story/page-7.png',
-    'images/story/page-8-number.png',
-    'images/story/page-8.png',
+    image1, image2,
+    image3, image4,
+    image5, image6,
+    image7, image8,
+    image9, image10,
+    image11, image12,
+    image13, image14,
+    image15, image16
   ];
 
-  // في حال عدد فردي نضيف صفحة بيضاء في الآخر
-  if (pages.length % 2 !== 0) pages.push('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width=\\"900\\" height=\\"1200\\"></svg>');
+  // لو عدد الصفحات فردي نضيف صفحة بيضاء (حتى يظل الزوجي)
+  if (pages.length % 2 !== 0) {
+    pages.push('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200"></svg>');
+  }
 
+  // عناصر الـ DOM (تحقّق موجودة)
   const stage   = document.querySelector('#sawti-story .book-stage');
+  if (!stage) { console.error('book-stage not found'); return; }
+
   const leftEl  = stage.querySelector('.page-left');
   const rightEl = stage.querySelector('.page-right');
+  if (!leftEl || !rightEl) { console.error('page-left/page-right img elements not found'); return; }
+
   const prevBtn = document.querySelector('#sawti-story .book-prev');
   const nextBtn = document.querySelector('#sawti-story .book-next');
 
-  // الفهرس دايمًا يشير لرقم صفحة اليمين (0-based، زوجي)
-  let index = 0; // يبدأ من أول spread: [index, index+1]
+  // متغير لمنع تكرار النقر أثناء الأنيميشن
+  let isAnimating = false;
 
+  // index يدل على صفحة اليمين في السبريد (0-based, زوجي)
+  let index = 0;
+
+  // دالة تساعد تحدد padding للغلاف طبقاً لحجم الشاشة
+  function applyCoverPadding() {
+    // القيمة المطلوبة للموبايل 50px، للديسكتوب 170px
+    const mobileThreshold = 575; // px
+    if (window.innerWidth <= mobileThreshold) {
+      leftEl.style.paddingRight = '50px';
+    } else {
+      leftEl.style.paddingRight = '170px';
+    }
+  }
+
+  // دالة عرض واحدة ومركّزة (معدّلة لإضافة padding يمين للغلاف فقط)
   function render(){
-    const leftSrc  = pages[index];
-    const rightSrc = pages[index+1];
+    const leftSrc  = pages[index] || '';
+    const rightSrc = pages[index+1] || '';
+
+    // عرض الصور
+    leftEl.style.display  = 'block';
+    rightEl.style.display = 'block';
     leftEl.src  = leftSrc;
     rightEl.src = rightSrc;
 
-    // فعّل/عطّل الأزرار حسب الموضع
-    prevBtn.disabled = (index === 0);
-    nextBtn.disabled = (index + 2 >= pages.length);
+    // Reset أي ستايلات سابقة
+    leftEl.style.width = '';
+    rightEl.style.width = '';
+    leftEl.style.objectFit = '';
+    rightEl.style.objectFit = '';
+    leftEl.style.margin = '';
+    rightEl.style.margin = '';
+    leftEl.style.paddingRight = '';
+    rightEl.style.paddingLeft = '';
+
+    // وضع غلاف + padding يمين على الصورة اليسرى فقط عند اول سبريد
+    if (index === 0) {
+      stage.classList.add('is-cover');
+      applyCoverPadding();
+    } else {
+      stage.classList.remove('is-cover');
+      leftEl.style.paddingRight = '';
+      rightEl.style.paddingLeft = '';
+    }
+
+    // فعل/عطّل أزرار (لو كانت موجودة)
+    if (prevBtn) prevBtn.disabled = (index === 0);
+    if (nextBtn) nextBtn.disabled = (index + 2 >= pages.length);
   }
 
-  window.addEventListener('keydown', (e)=>{
-    if (e.key === 'ArrowRight' && !nextBtn.disabled) goNext();
-    if (e.key === 'ArrowLeft'  && !prevBtn.disabled) goPrev();
-  });
-  // قلب يمين (Next): تقلب صفحة اليمين على اليسار وتكشف السبريد التالي
+  // انشاء ورقة متحركة (leaf) للـ flip — نفسك كما كانت
+  function createLeaf(frontUrl, backUrl, fromRight = true){
+    const leaf = document.createElement('div');
+    leaf.className = 'leaf ' + (fromRight ? 'turn-from-right' : 'turn-from-left');
+
+    // على الريسبونسف، ممكن نضبط العرض هنا لو تحب (اختياري)
+    const stageRect = stage.getBoundingClientRect();
+    const halfW = Math.round(stageRect.width / 2);
+    leaf.style.width = halfW + 'px';
+
+    const front = document.createElement('div');
+    front.className = 'side front';
+    front.style.backgroundImage = `url("${frontUrl}")`;
+
+    const back = document.createElement('div');
+    back.className = 'side back';
+    back.style.backgroundImage = `url("${backUrl}")`;
+    back.style.transform = 'rotateY(180deg)';
+
+    leaf.appendChild(front);
+    leaf.appendChild(back);
+    return leaf;
+  }
+
+  // التالي
   function goNext(){
+    if (isAnimating) return;                // منع أثناء الأنيميشن
     if (index + 2 >= pages.length) return;
 
-    // نضيف ورقة عند اليمين تقلب لليسار: front = الصفحة اليمنى الحالية، back = الصفحة اليسرى التالية
-    const leaf = document.createElement('div');
-    leaf.className = 'leaf turn-from-right';
-    const front = document.createElement('div');
-    const back  = document.createElement('div');
-    front.className = 'side front';
-    back.className  = 'side back';
-    front.style.backgroundImage = `url("${pages[index+1]}")`;
-    back.style.backgroundImage  = `url("${pages[index+2]}")`;
+    isAnimating = true;
+    if (nextBtn) nextBtn.disabled = true;
+    if (prevBtn) prevBtn.disabled = true;
 
-    // الخلف لازم يتقلب 180° عشان يبقى وجهه ظاهر بعد اللفة
-    back.style.transform = 'rotateY(180deg)';
-    leaf.appendChild(front);
-    leaf.appendChild(back);
+    const frontUrl = pages[index+1];
+    const backUrl  = pages[index+2] || '';
+
+    const leaf = createLeaf(frontUrl, backUrl, true);
     stage.appendChild(leaf);
 
     leaf.addEventListener('animationend', () => {
-      index += 2;       // ننتقل للسبريد التالي
+      index += 2;
       render();
       leaf.remove();
-    }, { once:true });
+      isAnimating = false;
+      if (nextBtn) nextBtn.disabled = (index + 2 >= pages.length);
+      if (prevBtn) prevBtn.disabled = (index === 0);
+    }, { once: true });
   }
 
-  // قلب شمال (Prev): تقلب صفحة الشمال على اليمين وتكشف السبريد السابق
+  // السابق
   function goPrev(){
+    if (isAnimating) return;
     if (index - 2 < 0) return;
 
-    // نضيف ورقة عند الشمال تقلب لليمين: front = الصفحة اليسرى الحالية، back = الصفحة اليمنى السابقة
-    const leaf = document.createElement('div');
-    leaf.className = 'leaf turn-from-left';
-    const front = document.createElement('div');
-    const back  = document.createElement('div');
-    front.className = 'side front';
-    back.className  = 'side back';
+    isAnimating = true;
+    if (nextBtn) nextBtn.disabled = true;
+    if (prevBtn) prevBtn.disabled = true;
 
-    // الصفحة اليسرى الحالية
-    front.style.backgroundImage = `url("${pages[index]}")`;
-    // الصفحة اليمنى السابقة
-    back.style.backgroundImage  = `url("${pages[index-1]}")`;
-    back.style.transform = 'rotateY(180deg)';
+    const frontUrl = pages[index];
+    const backUrl  = pages[index-1] || '';
 
-    leaf.appendChild(front);
-    leaf.appendChild(back);
+    const leaf = createLeaf(frontUrl, backUrl, false);
     stage.appendChild(leaf);
 
     leaf.addEventListener('animationend', () => {
-      index -= 2;       // نرجع للسبريد السابق
+      index -= 2;
       render();
       leaf.remove();
-    }, { once:true });
+      isAnimating = false;
+      if (nextBtn) nextBtn.disabled = (index + 2 >= pages.length);
+      if (prevBtn) prevBtn.disabled = (index === 0);
+    }, { once: true });
   }
 
-  // أزرار
-  nextBtn.addEventListener('click', goNext);
-  prevBtn.addEventListener('click', goPrev);
+  // ربط الأزرار لو موجودة
+  if (nextBtn) nextBtn.addEventListener('click', goNext);
+  if (prevBtn) prevBtn.addEventListener('click', goPrev);
 
   // كيبورد (← →)
-  window.addEventListener('keydown', (e)=>{
-    if (e.key === 'ArrowRight') goNext();
-    if (e.key === 'ArrowLeft')  goPrev();
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' && (!nextBtn || !nextBtn.disabled)) goNext();
+    if (e.key === 'ArrowLeft'  && (!prevBtn || !prevBtn.disabled)) goPrev();
   });
 
   // سحب/سوايب للموبايل
@@ -538,111 +596,27 @@ Dive in our journey and discover how Sawti came to life. This book takes you beh
     let sx=0, dx=0, touching=false;
     el.addEventListener('touchstart', (e)=>{ touching=true; sx=e.touches[0].clientX; }, {passive:true});
     el.addEventListener('touchmove',  (e)=>{ if(!touching) return; dx=e.touches[0].clientX - sx; }, {passive:true});
-    el.addEventListener('touchend',   ()=>{
+    el.addEventListener('touchend',   ()=>{ 
       touching=false;
       if (Math.abs(dx) > 40){
-        if (dx < 0) goNext(); else goPrev();
+        if (dx < 0 && (!nextBtn || !nextBtn.disabled)) goNext();
+        if (dx > 0 && (!prevBtn || !prevBtn.disabled)) goPrev();
       }
       sx=dx=0;
     });
   })(stage);
 
-  // تحميل أول سبريد
+  // لو غيرت حجم النافذة نحدّث الـ padding لو كنا على الغلاف
+  window.addEventListener('resize', () => {
+    if (index === 0) applyCoverPadding();
+  });
+
+  // حمّل أول سبريد
   render();
-})();
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-const pages = [
-  "images/story/page-1-1.png", 
-  "images/story/page-1-2.png",
-
-  "images/story/page-2.png", 
-  "images/story/page-2-number.png",
-
-  "images/story/page-3.png", 
-  "images/story/page-3-number.png",
-
-  "images/story/page-4.png", 
-  "images/story/page-4-number.png",
-
-  "images/story/page-5.png", 
-  "images/story/page-5-number.png",
-
-  "images/story/page-6.png", 
-  "images/story/page-6-number.png",
-
-  "images/story/page-7.png", 
-  "images/story/page-7-number.png",
-
-  "images/story/page-8.png", 
-  "images/story/page-8-number.png",
-];
- // حط هنا صور الصفحات
-
-  let currentPage = 0;
-
-  const stage = document.querySelector(".book-stage");
-  const leftPage = stage.querySelector(".page-left");
-  const rightPage = stage.querySelector(".page-right");
-  const prevBtn = document.querySelector(".book-prev");
-  const nextBtn = document.querySelector(".book-next");
-
-  // دالة لعرض الصفحات
-  function renderPages() {
-    leftPage.src = pages[currentPage] || "";
-    rightPage.src = pages[currentPage + 1] || "";
-  }
-
-  // قلب يمين (Next)
-  function goNext() {
-    if (currentPage + 2 < pages.length) {
-      const leaf = document.createElement("div");
-      leaf.className = "leaf turn-from-right";
-      leaf.innerHTML = `
-        <div class="side front" style="background-image:url(${pages[currentPage+1]})"></div>
-        <div class="side back" style="background-image:url(${pages[currentPage+2] || ""})"></div>
-      `;
-      stage.appendChild(leaf);
-
-      leaf.addEventListener("animationend", () => {
-        leaf.remove();
-        currentPage += 2;
-        renderPages();
-      }, { once: true });
-    }
-  }
-
-  // قلب شمال (Prev)
-  function goPrev() {
-    if (currentPage - 2 >= 0) {
-      const leaf = document.createElement("div");
-      leaf.className = "leaf turn-from-left";
-      leaf.innerHTML = `
-        <div class="side front" style="background-image:url(${pages[currentPage-1]})"></div>
-        <div class="side back" style="background-image:url(${pages[currentPage]})"></div>
-      `;
-      stage.appendChild(leaf);
-
-      leaf.addEventListener("animationend", () => {
-        leaf.remove();
-        currentPage -= 2;
-        renderPages();
-      }, { once: true });
-    }
-  }
-
-  prevBtn.addEventListener("click", goPrev);
-  nextBtn.addEventListener("click", goNext);
-
-  // أول تحميل
-  renderPages();
 });
-
-  function changeLang(el) {
-    window.location.href = el.value; 
-  }
 </script>
+
+
 
 </body>
 </html>

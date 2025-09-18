@@ -159,6 +159,13 @@
   animation: fadeInUp 1.2s ease-out 0.2s both;
   font-size: 16px;
 }
+
+.text button:hover {
+  background: radial-gradient( #39478B 0%, #0E194C 100%);
+
+
+}
+
 /* Hand animations */
 
 @keyframes slideInFromLeft {
@@ -184,11 +191,11 @@
 }
 
 .animate-hands .hand-human {
-  animation: slideInFromLeft 1.2s ease-out forwards;
+  animation: slideInFromLeft 2.6s ease-out forwards;
 }
 
 .animate-hands .hand-robot {
-  animation: slideInFromRight 1.2s ease-out forwards;
+  animation: slideInFromRight 2.6s ease-out forwards;
   animation-delay: 0.2s; /* ييجي بعد اليد البشرية بشوية */
 }
 
@@ -1312,6 +1319,8 @@ header {
   .hand-img {
     width: 100% !important;
   }
+
+  
 }
 
 #about {
@@ -1320,31 +1329,37 @@ header {
 }
  
 /* start media queres  */
-@media screen and (min-width: 300px) and (max-width: 350px){
-   
+@media screen and (min-width: 350px) and (max-width: 380px){
+    .min-vh-100
+ {
+        min-height: 80dvh !important;
+    }
   .text h2
  {
     
     font-size: 30px !important;
 }
 
-         .hand-human {
-    width: 65vw;
-    position: absolute;
- left: -32px !important;
-        top: 54% !important;
-    transform: translate(0%, -50%);
-  }
-  .hand-robot {
-    position: absolute;
-             left:153px !important;
-        top: 60% !important;
-    transform: translate(0%, -50%);
-  }
+  .hand-human {
+        width: 65vw;
+        position: absolute;
+        left: -17px !important;
+        top: 78% !important;
+        transform: translate(0%, -50%);
+    }
+    .hand-robot {
+        position: absolute;
+        left: 184px !important;
+        top: 90% !important;
+        transform: translate(0%, -50%);
+    }
 
 }
 
-@media screen and (min-width: 380px) and (max-width: 440px){
+@media screen and (min-width: 380px) and (max-width: 450px){
+ .min-vh-100 {
+        min-height: 80vh !important;
+    }
   
   .text h2
  {
@@ -1352,19 +1367,19 @@ header {
     font-size: 30px !important;
 }
 
-         .hand-human {
-    width: 65vw;
-    position: absolute;
- left: -32px !important;
-        top: 54% !important;
-    transform: translate(0%, -50%);
-  }
-  .hand-robot {
-    position: absolute;
-             left:178px !important;
-        top: 62% !important;
-    transform: translate(0%, -50%);
-  }
+   .hand-human {
+        width: 65vw;
+        position: absolute;
+        left: -32px !important;
+        top: 78% !important;
+        transform: translate(0%, -50%);
+    }
+.hand-robot {
+        position: absolute;
+        left: 204px !important;
+        top: 90% !important;
+        transform: translate(0%, -50%);
+    }
 }
 /* start small screen */
 
@@ -1377,7 +1392,7 @@ header {
     font-size: 30px !important;
 }
 
-         .hand-human {
+         /* .hand-human {
     width: 65vw;
     position: absolute;
  left: -32px !important;
@@ -1389,13 +1404,13 @@ header {
              left:  166px !important;
         top: 61% !important;
     transform: translate(0%, -50%);
-  }
+  } */
 
 }
 @media screen and (min-width: 450px) and (max-width: 511px){
-  .home{
-    min-height: 100vh !important;
-  }
+ .home {
+        min-height: 80vh !important;
+    }
   
   .text h2
  {
@@ -1404,24 +1419,26 @@ header {
 }
  
  
-    .hand-human {
+        .hand-human
+ {
         width: 65vw;
         position: absolute;
         left: -43px !important;
-        top: 70% !important;
+        top: 76% !important;
         transform: translate(0%, -50%);
     }
- .hand-robot {
+    .hand-robot
+ {
         position: absolute;
         left: 223px !important;
-        top: 82% !important;
+        top: 90% !important;
         transform: translate(0%, -50%);
     }
 }
 @media screen and (min-width: 511px) and (max-width: 576px) {
-  .home{
-    min-height: 100vh !important;
-  }
+ .home {
+        min-height: 80vh !important;
+    }
   
   .text h2
  {
@@ -1429,18 +1446,17 @@ header {
     font-size: 30px !important;
 }
 
-    .hand-human {
+   .hand-human {
         width: 65vw;
         position: absolute;
-        left: -53px !important;
-        top: 72% !important;
+        left: -48px !important;
+        top: 74% !important;
         transform: translate(0%, -50%);
     }
-     .hand-robot
- {
+  .hand-robot {
         position: absolute;
-                left: 256px !important;
-        top: 87% !important;
+        left: 256px !important;
+        top: 90% !important;
         transform: translate(0%, -50%);
     }
 }
@@ -1450,9 +1466,10 @@ header {
      /* .animate-hands {
     background-color: rgba(0, 0, 0, 0.5) !important;
   } */
-  .home{
-    min-height: 100vh !important;
-  }
+     .home
+ {
+        min-height: 72vh !important;
+    }
   
 .text h2
  {
@@ -1464,13 +1481,13 @@ header {
         width: 65vw;
         position: absolute;
         left: -37px !important;
-        top: 62% !important;
+        top: 67% !important;
         transform: translate(0%, -50%);
     }
       .hand-robot {
         position: absolute;
         right: -81px !important;
-        top: 78% !important;
+        top: 86% !important;
         transform: translate(0%, -50%);
     }
 
@@ -1480,26 +1497,36 @@ header {
 
 
 @media screen and (min-width: 776px) and (max-width: 880px) {
+    .min-vh-100
+ {
+        min-height: 80vh !important;
+    }
  .text h2
  {
     
     font-size: 30px !important;
 }
-       .hand-human {
+          .hand-human
+ {
         width: 65vw;
-        left: -79px !important;
-        top: 55% !important;
-        transform: translate(0%, -50%) !important;
+        position: absolute;
+        left: -37px !important;
+        top: 67% !important;
+        transform: translate(0%, -50%);
     }
-.hand-robot {
-        right: -69px !important;
-        top: 70% !important;
-        transform: translate(0%, -50%) !important;
+    .hand-robot
+ {
+        position: absolute;
+        right: -81px !important;
+        top: 86% !important;
+        transform: translate(0%, -50%);
     }
 }
 
 @media screen and (min-width: 880px) and (max-width: 992px) {
-  
+     .min-vh-100 {
+        min-height: 80vh !important;
+    }
 .text h2
  {
     
@@ -1509,13 +1536,13 @@ header {
     padding-top: 150px;
 }
 .hand-human {
-        left: -142px !important;
-        top: 53% !important;
+        left: -132px !important;
+        top: 58% !important;
         transform: translate(0%, -50%) !important;
     }
-     .hand-robot {
+    .hand-robot {
         right: -97px !important;
-        top: 72% !important;
+        top: 82% !important;
         transform: translate(0%, -50%) !important;
     }
 
@@ -1535,18 +1562,18 @@ header {
     
 }
 
- .hand-human {
+    .hand-human
+ {
         width: 65vw;
         position: absolute;
-        left: -96px;
-        top: 58%;
+        left: -82px;
+        top: 63%;
         transform: translate(0%, -50%);
     }
-      .hand-robot
- {
+     .hand-robot {
         position: absolute;
         right: -90px;
-        top: 78%;
+        top: 84%;
         transform: translate(0%, -50%);
     }
 }
@@ -1562,17 +1589,17 @@ header {
 }
 
 
-    .hand-human {
-    width: 65vw;
-    position: absolute;
-   left: -104px;
-        top: 56%;
-    transform: translate(0%, -50%);
-  }
- .hand-robot {
+  .hand-human {
+        width: 65vw;
+        position: absolute;
+        left: -89px;
+        top: 57%;
+        transform: translate(0%, -50%);
+    }
+    .hand-robot {
         position: absolute;
         right: -100px;
-        top: 79%;
+        top: 81%;
         transform: translate(0%, -50%);
     }
 }
@@ -1580,20 +1607,17 @@ header {
 /* start extra extra large screen */
 @media screen and (min-width: 1201px) and (max-width: 1400px) {
  
-   /* .animate-hands {
-    background-color: red !important;
-  } */
-    .hand-human {
+ .hand-human {
         width: 62vw;
         position: absolute;
-        left: -70px;
-        top: 58%;
+        left: -56px;
+        top: 59%;
         transform: translate(0%, -50%);
     }
-    .hand-robot {
+      .hand-robot {
         position: absolute;
         right: -115px;
-        top: 80%;
+        top: 84%;
         transform: translate(0%, -50%);
     }
 }
@@ -1661,3 +1685,219 @@ header {
 
 /* end media queres*/
 /* أقصى الشمال */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-height: 640px) {
+  .min-vh-100
+ {
+    min-height: 125vh !important;
+}
+    .hand-human
+ {
+        width: 60vw;
+        position: absolute;
+        left: -85px;
+        top: 56% !important;
+        transform: translate(0%, -50%);
+    }
+   .hand-robot {
+        position: absolute;
+        right: -108px;
+        top: 84% !important;
+        transform: translate(0%, -50%);
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1200px) and (max-height: 640px) {
+    /* .animate-hands {
+    background-color: red !important;
+  } */
+    .hand-human
+ {
+        width: 60vw;
+        position: absolute;
+        left: -72px !important;
+        top: 56% !important;
+        transform: translate(0%, -50%);
+    }
+    .hand-robot {
+        position: absolute;
+        right: -86px !important;
+        top: 81% !important;
+        transform: translate(0%, -50%);
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1100px) and (max-height: 640px){
+.hand-human {
+        width: 60vw;
+        position: absolute;
+        left: -46px !important;
+        top: 59% !important;
+        transform: translate(0%, -50%);
+    }
+
+.hand-robot {
+        position: absolute;
+        right: -79px !important;
+        top: 83% !important;
+        transform: translate(0%, -50%);
+    }
+}
+
+@media screen and (min-width: 880px) and (max-width: 992px) and (max-height: 640px){
+      .min-vh-100
+ {
+        min-height: 112vh !important;
+    }
+  .hand-human {
+        width: 60vw;
+        position: absolute;
+        left: -109px !important;
+        top: 52% !important;
+        transform: translate(0%, -50%);
+    }
+
+.hand-robot {
+        position: absolute;
+        right: -94px !important;
+        top: 73% !important;
+        transform: translate(0%, -50%);
+    }
+  
+}
+
+
+@media screen and (min-width: 776px) and (max-width: 880px) and (max-height: 640px) {
+ 
+   .hand-human {
+        width: 65vw;
+        left: -68px !important;
+        top: 56% !important;
+        transform: translate(0%, -50%) !important;
+    }
+.hand-robot {
+        right: -77px !important;
+        top: 75% !important;
+        transform: translate(0%, -50%) !important;
+    }
+  
+  }
+
+  @media screen and (min-width: 577px) and (max-width: 776px) and (max-height: 640px){
+      .hand-human
+ {
+        width: 65vw;
+        left: -49px !important;
+        top: 58% !important;
+        transform: translate(0%, -50%) !important;
+    }
+    .hand-robot {
+        right: -71px !important;
+        top: 75% !important;
+        transform: translate(0%, -50%) !important;
+    }
+  }
+
+  @media screen and (min-width: 511px) and (max-width: 576px) and (max-height: 640px){
+    .min-vh-100 {
+        min-height: 105vh !important;
+    }
+      .hand-human {
+        width: 65vw;
+        left: -40px !important;
+        top: 68% !important;
+        transform: translate(0%, -50%) !important;
+    }
+   .hand-robot {
+        right: -71px !important;
+        top: 84% !important;
+        transform: translate(0%, -50%) !important;
+    }
+  }
+
+  @media screen and (min-width: 450px) and (max-width: 511px) and (max-height: 640px){
+    .hero-inner {
+    padding-top: 151px !important;
+}
+    .min-vh-100 {
+        min-height: 105vh !important;
+    }
+      .hand-human {
+        width: 65vw;
+        left: -40px !important;
+        top: 68% !important;
+        transform: translate(0%, -50%) !important;
+    }
+   .hand-robot {
+        right: -71px !important;
+        top: 84% !important;
+        transform: translate(0%, -50%) !important;
+    }
+  }
+
+  @media screen and (min-width: 380px) and (max-width: 450px) and (max-height: 640px){
+      /* .animate-hands {
+    background-color: red !important;
+  } */
+    .hero-inner {
+    padding-top: 151px !important;
+}
+    .min-vh-100 {
+        min-height: 105vh !important;
+    }
+        .hand-human {
+        width: 65vw;
+        left: -24px !important;
+        top: 68% !important;
+        transform: translate(0%, -50%) !important;
+    }
+      .hand-robot {
+        left: 195px !important;
+        top: 79% !important;
+        transform: translate(0%, -50%) !important;
+    }
+  }
+  
+@media screen and (min-width:  350px) and (max-width:380px) and (max-height: 640px){
+    .hero-inner {
+    padding-top: 151px !important;
+}
+    .min-vh-100 {
+        min-height: 105vh !important;
+    }
+     .hand-human {
+        width: 65vw;
+        left: -24px !important;
+        top: 61% !important;
+        transform: translate(0%, -50%) !important;
+    }
+   .hand-robot {
+        left: 174px !important;
+        top: 72% !important;
+        transform: translate(0%, -50%) !important;
+    }
+}
+
+a{
+  cursor: pointer;
+  
+}
