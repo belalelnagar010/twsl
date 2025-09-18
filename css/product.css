@@ -1214,3 +1214,31 @@ body {
   background-position: center center !important;
   background-repeat: no-repeat !important;
 }
+*{box-sizing:border-box;}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+
+.full-width, .hero, .section {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+.row, .flex {
+  display: flex;
+  flex-wrap: wrap; 
+}
+.row > * , .flex > * {
+  min-width: 0; 
+}
+
+* {
+  outline: none;
+}
+.js-debug-overflow {
+  position: relative;
+}
