@@ -168,7 +168,7 @@ body {
 }
 .section-body p {
   color: #dbdbdb;
-  font-size: 35px;
+  font-size: 30px;
 }
 .section-body button {
   background: #16256f;
@@ -347,6 +347,7 @@ body {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   user-select: none;
   cursor: default;
+  font-size:22px;
 }
 
 /* ألوان لطيفة اختيارية */
@@ -355,7 +356,6 @@ body {
   background: rgba(255, 171, 243, 0.5);
   color: #191919;
   font-weight: 600;
-  font-size: 22px;
   padding: 24px 32px;
   border-radius: 30px;
 }
@@ -363,7 +363,6 @@ body {
   background: rgba(91, 168, 186, 0.5);
   color: #191919;
   font-weight: 600;
-  font-size: 22px;
   border-radius: 30px;
   padding: 24px 32px;
 }
@@ -371,7 +370,6 @@ body {
   background: rgba(223, 94, 207, 0.5);
   color: #191919;
   font-weight: 600;
-  font-size: 22px;
   padding: 24px 32px;
 
   border-radius: 30px;
@@ -379,7 +377,6 @@ body {
 .chip--Lavender {
   color: #191919;
   font-weight: 600;
-  font-size: 22px;
   background: rgba(205, 162, 255, 0.5);
 
   padding: 24px 32px;
@@ -389,7 +386,6 @@ body {
 .chip--BabyBlue {
   color: #191919;
   font-weight: 600;
-  font-size: 22px;
   background: rgba(166, 238, 255, 0.5);
   padding: 24px 32px;
 
@@ -398,7 +394,6 @@ body {
 .chip--Dark-Cyan {
   color: #191919;
   font-weight: 600;
-  font-size: 22px;
   background: rgba(37, 120, 139, 0.5);
 
   padding: 24px 32px;
@@ -697,13 +692,13 @@ body {
 
 .book-prev {
   position: absolute;
-  top: 62%;
-  left: 23px;
+  top: 50%;
+  left: -100px;
 }
 .book-next {
   position: absolute;
-  top: 62%;
-  right: 23px;
+  top: 50%;
+  right: -100px;
 }
 .btn-icon {
   border: none;
@@ -956,7 +951,60 @@ body {
 
 
 
+@media screen and (min-width:  557px) and (max-width:776px)and (max-height: 2000px){
+
+.hero {
+    height: 68vh;
+  }
+}
+@media screen and (min-width:  557px) and (max-width:776px)and (max-height: 700px){
+  .image-home img {
+        max-height: 150px;
+        width: 221px !important;
+    }
+.hero {
+    height: 68vh;
+  }
+}
+
+
+
+
+.padding-left{
+  padding-left: 20px;
+}
+
+
+
+@media screen and (min-width: 350px) and (max-width: 557px)and (max-height: 700px){
+.hero {
+    height: 72vh;
+   
+  }
+   .image-home img {
+    max-height: 120px;
+    width: 199px !important;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 557px) 
+       and (min-height: 700px) and (max-height: 2000px) {
+  .hero {
+    height: 65vh;
+  }
+  .image-home img {
+    max-height: 120px;
+    width: 199px !important;
+  }
+}
+
 @media screen and (min-width: 350px) and (max-width: 557px) {
+     .btn-icon img {
+    width: 61px !important;
+   
+}
+  .section-body p {
+        font-size: 12px !important;
+    }
   #preview .preview-dots {    
     gap: 23px;
 }
@@ -1006,6 +1054,7 @@ body {
 @media screen and (min-width: 350px) and (max-width: 776px) {
   #unique {
     margin-bottom: 100px;
+    margin-top: 52px;
   }
 
   .section-body h1 {
@@ -1018,9 +1067,7 @@ body {
   .section-body button {
     width: 173px;
   }
-  .hero {
-    height: 100vh;
-  }
+ 
 
  .Unique-title {
         color: #191919;
@@ -1108,6 +1155,11 @@ body {
 }
 
 @media screen and (max-width: 776px) {
+  .chip
+ {
+
+    font-size: 15px;
+}
   .image-home {
     position: absolute;
     right: 0;
@@ -1134,10 +1186,7 @@ body {
   .section-body p {
     font-size: 15px;
   }
-  .image-home img {
-    max-height: 120px;
-    width: 254px;
-  }
+ 
 }
 @media screen and (max-width: 400px) {
     #preview .preview-stage {

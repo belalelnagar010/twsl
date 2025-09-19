@@ -462,7 +462,8 @@ header {
 }
 
 .mv-card {
-  width: 344px;
+  width: 100%;
+  max-width: 344px;
   height: 253px;
   
 
@@ -523,7 +524,7 @@ header {
   font-size: 16px;
   color: #505050;
   font-weight: 400;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15) !important;
   border-radius: 0px 0px 16px 16px;
 
 
@@ -1170,11 +1171,12 @@ header {
   }
 
   /* النيوزليتر */
-  .footer .p-3 {
-    padding: 1rem !important;
-    margin-top: 1rem;
-    text-align: center;
-  }
+.footer .p-3 {
+        padding: 1rem !important;
+        margin-top: 1rem;
+        text-align: center;
+        margin: 0 20px;
+    }
   .footer .p-3 form {
     display: flex;
     flex-direction: column;
@@ -1309,6 +1311,9 @@ header {
     padding-inline: 20px;
 
   }
+.message-title {
+    font-size: 25px;
+}
   #blogs {
  
   padding-inline: 20px;
@@ -1999,4 +2004,57 @@ html, body {
 }
 .js-debug-overflow {
   position: relative;
+}
+/* override behavior — NO px values changed */
+#mission .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: stretch !important; 
+}
+
+#mission .mv-col {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+#mission .mv-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;   
+  box-sizing: border-box !important;
+  position: relative !important; 
+}
+
+#mission .mv-hero {
+  flex: 0 0 auto !important;
+}
+
+#mission .prag {
+  flex: 1 1 auto !important;    
+  
+  padding: 0 32px;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  font-size: 16px;
+  color: #505050;
+  font-weight: 400;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0px 0px 16px 16px;
+
+
+}
+
+#mission .mv-icon {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 3 !important;
+  pointer-events: none !important;
+}
+
+@media (min-width: 577px) and (max-width: 991.98px) {
+  #mission .row { align-items: stretch !important; }
+  #mission .mv-card { height: 100% !important; }
+  #mission .prag { overflow-y: auto !important; }
 }

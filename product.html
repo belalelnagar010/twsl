@@ -24,7 +24,7 @@
 
   <header class="position-absolute top-0 start-0 end-0  " style="background: transparent;">
 <div class="container">
- <nav class="navbar navbar-expand-lg py-0 px-4">
+ <nav class="navbar navbar-expand-lg ">
    
    <!-- Logo -->
    <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -93,8 +93,7 @@
 
   <section id="unique" >
     <div class="container-fluid">
-      <div class="" style="padding-left: 40px;">
-
+      <div class="padding-left">
         <h3 class="  Unique-title ">What Makes Sawti Unique…</h3>
         <p class=" Unique-p ">
           Explore the many features and advantages of Sawti. Customize your experience and express your individuality with a variety of unique themes.
@@ -200,21 +199,21 @@
 
 
 
-<section id="sawti-story" class="py-5 position-relative">
+<section id="sawti-story" class="py-5 ">
     <div class="container-fluid">
       <h3 class="Sawti-Story-title">Sawti Story</h3>
       <p class="Sawti-Story-p">
         Dive in our journey and discover how Sawti came to life. This book takes you behind the scenes—how the idea started, what inspired us, and why design played such a big role. This isn’t just the story of an app. It’s the story of hope, resilience, and people finally finding their voice.
       </p>
 
-      <div class="story-book">
+      <div class="story-book position-relative">
         <div class="book-stage d-flex justify-content-center" aria-live="polite">
           <!-- الصفحتين الثابتين -->
           <img class="page page-left"  alt="Left page">
           <img class="page page-right" alt="Right page">
+          
           <!-- ورقة القلب المتحركة تُضاف ديناميكياً -->
         </div>
-
         <div class="book-controls">
           <button class="btn-icon book-prev" type="button" aria-label="Previous">
             <img src="images/book-l.png" alt="Previous">
@@ -238,13 +237,12 @@
         <div class="gap-3">
           <div class="d-flex align-items-center gap-3">
             <div class="">
-              <img src="images/logo.png" alt="Tawasol" height="40" class="logo-footer-img">
-
+              <img src="images/logo.png" alt="Tawasol"  class="logo-footer-img">
             </div>
 <div class="lang-wrapper d-flex align-items-center gap-2 mt-2">
   <img src="images/en.png" alt="EN" height="32" width="32" class="lang-flag">
   <select class="lang-select" onchange="changeLang(this)">
-    <option value="product-ar.html">AR</option>
+    <option value="product-ar.html" >AR</option>
     <option value="product.html"selected >EN</option>
   </select>
 </div>
@@ -266,7 +264,7 @@
           </a>
         </div>
       </div>
-
+       <hr>
       <!-- Quick links -->
       <div class="col-6 col-lg-4">
         <h6 class="fw-semibold" style="font-size: 24px ; font-weight: 400; color:#191919 ; ">Quick Link</h6>
@@ -317,7 +315,6 @@
     </div>
   </div>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 // ألوان الفريم فقط
@@ -614,6 +611,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // حمّل أول سبريد
   render();
 });
+
+ function changeLang(el) {
+    window.location.href = el.value; 
+  }
 </script>
 
 
